@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.config.js",
-    "build": "webpack --config config/webpack.prod.config.js",
+    "build": "webpack --config config/webpack.dev.config.js",
     "pub": "npm run build && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -49,6 +49,8 @@
   "dependencies": {
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react-reconciler": "^0.18.0",
+    "antd": "^4.6.6",
+    "babel-plugin-import": "^1.13.1",
     "react-reconciler": "^0.25.1"
   }
 }

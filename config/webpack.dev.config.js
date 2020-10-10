@@ -13,12 +13,19 @@ const devConfig = {
     rules: [
       {
         test: /\.css$/,
-        exclude: /\.min\.css$/,
-        loader: ['style-loader', 'css-loader?modules'],
+        exclude: [/node_modules/],
+        loader: 'css-loader?modules',
+        options: {
+          modules: true,
+        },
       },
       {
-        test: /\.min\.css$/,
-        loader: ['style-loader', 'css-loader'],
+        test: /\.css$/,
+        include: [/node_modules/],
+        loader: 'css-loader',
+        options: {
+          modules: false,
+        },
       },
     ],
   },
@@ -26,7 +33,7 @@ const devConfig = {
     contentBase: path.join(__dirname, '../example/src/'),
     compress: true,
     host: '127.0.0.1', // webpack-dev-server启动时要指定ip，不能直接通过localhost启动，不指定会报错
-    port: 8001, // 启动端口为 3001 的服务
+    port: 8001, // 启动端口为 8001 的服务
     open: true, // 自动打开浏览器
   },
 }
