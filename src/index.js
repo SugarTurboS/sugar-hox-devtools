@@ -4,73 +4,55 @@
  * @createTime 2020-10-10
  */
 import React from 'react'
-import './index.css'
+import styles from './index.css'
 import Tree from 'antd/lib/tree'
-// import 'antd/lib/tree/style/index.css'
 import mock from './mock'
 
-class HoxTool extends React.Component {
-  render() {
+function HoxTool() {
+  function checkObjectOrArray(value) {
     return (
-      <div className="wrapper">
-        <Tree
-          showLine
-          defaultExpandedKeys={['0-0-0']}
-          // onSelect={this.onSelect}
-          treeData={[
-            {
-              title: 'parent 1',
-              key: '0-0',
-              children: [
-                {
-                  title: 'parent 1-0',
-                  key: '0-0-0',
-                  children: [
-                    {
-                      title: 'leaf',
-                      key: '0-0-0-0',
-                    },
-                    {
-                      title: 'leaf',
-                      key: '0-0-0-1',
-                    },
-                    {
-                      title: 'leaf',
-                      key: '0-0-0-2',
-                    },
-                  ],
-                },
-                {
-                  title: 'parent 1-1',
-                  key: '0-0-1',
-                  children: [
-                    {
-                      title: 'leaf',
-                      key: '0-0-1-0',
-                    },
-                  ],
-                },
-                {
-                  title: 'parent 1-2',
-                  key: '0-0-2',
-                  children: [
-                    {
-                      title: 'leaf',
-                      key: '0-0-2-0',
-                    },
-                    {
-                      title: 'leaf',
-                      key: '0-0-2-1',
-                    },
-                  ],
-                },
-              ],
-            },
-          ]}
-        />
-      </div>
+      Object.prototype.toString.call(value) === '[object Object]' ||
+      Object.prototype.toString.call(value) === '[object Array]'
     )
   }
-}
 
+  function renderTitle(value, key) {
+    if (!checkObjectOrArray(value)) {
+      return `${key}: ${value}`
+    }
+    return key
+  }
+  function format(model) {
+    let result = []
+    const deep = (children, value, idx) => {
+      Object.keys(value).map((key, index) => {
+        let temp = {}
+        temp.key = `${idx}-${index}`
+        temp.title = renderTitle(value[key], key)
+        temp.children = []
+        if (checkObjectOrArray(value[key])) {
+          deep(temp.children, value[key], temp.key)
+        }
+        children.push(temp)
+      })
+    }
+    Object.keys(model).map((key, index) => {
+      let temp = {}
+      temp.key = index
+      temp.title = renderTitle(model[key], key)
+      temp.children = []
+      if (checkObjectOrArray(model[key])) {
+        deep(temp.children, model[key], index)
+      }
+      result.push(temp)
+    })
+    return result
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <Tree treeData={format(mock)} blockNode={true} className="demo" />
+    </div>
+  )
+}
 export default HoxTool

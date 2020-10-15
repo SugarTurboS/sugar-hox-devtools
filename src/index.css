@@ -3,5 +3,8 @@
   padding: 0;
 }
 .wrapper {
+  background-color: red;
   width: 500px;
+}
+.demo {
 }
