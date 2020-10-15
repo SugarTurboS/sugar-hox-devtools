@@ -14,6 +14,46 @@ const mock = {
     currentCompany: {
       c_name: 'CVTE',
       c_job: '前端工程师',
+      school: [
+        {
+          s_name: 'xxx大学',
+          time: '2015-2019',
+        },
+        {
+          s_name: 'xxx高中',
+          time: '2012-2015',
+          school: [
+            {
+              s_name: 'xxx大学',
+              time: '2015-2019',
+            },
+            {
+              s_name: 'xxx高中',
+              time: '2012-2015',
+              school: [
+                {
+                  s_name: 'xxx大学',
+                  time: '2015-2019',
+                },
+                {
+                  s_name: 'xxx高中',
+                  time: '2012-2015',
+                  school: [
+                    {
+                      s_name: 'xxx大学',
+                      time: '2015-2019',
+                    },
+                    {
+                      s_name: 'xxx高中',
+                      time: '2012-2015',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   },
   useSugarModal: {
@@ -22,6 +62,9 @@ const mock = {
     people: [
       {
         name: '彭道宽',
+        count: 2,
+        age: null,
+        size: undefined,
       },
       {
         name: '潘潇',

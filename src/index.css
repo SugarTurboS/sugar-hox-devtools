@@ -2,9 +2,54 @@
   margin: 0;
   padding: 0;
 }
-.wrapper {
-  background-color: red;
-  width: 500px;
+.sugarHoxDevTools {
+  width: 100%;
+  min-height: 100%;
 }
-.demo {
+
+/* 头部 */
+.sugarHoxDevTools > .header {
+  display: flex;
+  -ms-flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.sugarHoxDevTools > .header > .title,
+.close {
+  font-size: 24px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.sugarHoxDevTools :global(.ant-tree) {
+  padding: 12px;
+  background: transparent;
+}
+
+.sugarHoxDevTools
+  :global(.ant-tree .ant-tree-switcher .ant-tree-switcher-icon) {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #5a8f9c;
+}
+
+.sugarHoxDevTools
+  :global(.ant-tree .ant-tree-switcher .ant-select-tree-switcher-icon) {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #5a8f9c;
+}
+
+.sugarHoxDevTools :global(.ant-tree .ant-tree-node-content-wrapper:hover) {
+  background-color: transparent;
+}
+
+.sugarHoxDevTools
+  :global(.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected) {
+  background-color: transparent;
 }
