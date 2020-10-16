@@ -18,7 +18,7 @@ import {
   isObject,
 } from './utils'
 
-function HoxTool() {
+function HoxTool({ onClose = () => {} }) {
   const currentTheme = THEME.DEFAULT
 
   function renderTitle(value, key) {
@@ -125,7 +125,9 @@ function HoxTool() {
     >
       <div className={styles.header}>
         <div className={styles.title}>Sugar Hox DevTools</div>
-        <div className={styles.close}>X</div>
+        <div className={styles.close} onClick={onClose}>
+          X
+        </div>
       </div>
       <Tree treeData={format(window.sugarHox)} blockNode={true} />
     </div>
