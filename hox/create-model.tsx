@@ -13,6 +13,7 @@ export function createModel<T, P>(hook: ModelHook<T, P>, hookArg?: P) {
         container.notify();
       }}
       hook={() => hook(hookArg)}
+      namespace={(hook as any).namespace}
     />
   );
   const useModel: UseModel<T> = depsFn => {
