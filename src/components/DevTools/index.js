@@ -18,7 +18,7 @@ import {
   isObject,
 } from './utils'
 
-function HoxTool({ onClose = () => {} }) {
+function DevTools({ onClose = () => {} }) {
   const currentTheme = THEME.DEFAULT
 
   function renderTitle(value, key) {
@@ -133,4 +133,4 @@ function HoxTool({ onClose = () => {} }) {
     </div>
   )
 }
-export default HoxTool
+export default DevTools

@@ -1,5 +1,5 @@
 import React from 'react'
-import HoxTool from './HoxTool'
+import DevTools from '../DevTools'
 
 class Main extends React.Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class Main extends React.Component {
   }
 
   render() {
-    return <HoxTool />
+    return <DevTools />
   }
 }
 

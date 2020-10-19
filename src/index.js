@@ -1,5 +1,9 @@
-import SugarHoxDevTools from './Main'
-export { createModel } from '../hox/create-model'
-export { withModel } from '../hox/with-model'
+import SugarHoxDevTools from './components/Main'
+import { createModel } from './hox/create-model'
+import { withModel } from './hox/with-model'
 
-export default SugarHoxDevTools
+export default {
+  SugarHoxDevTools,
+  createModel,
+  withModel,
+}
