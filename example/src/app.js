@@ -1,6 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import SugarHoxDevTools from '../../src' // 引入组件
+import hoxConfig from '../../dist' // 引入组件
+import countModel from './model'
 
-const App = () => <SugarHoxDevTools />
+const SugarHoxDevTools = hoxConfig.SugarHoxDevTools
+
+const App = () => {
+  const { count } = countModel()
+  return <SugarHoxDevTools />
+}
 render(<App />, document.getElementById('root'))
