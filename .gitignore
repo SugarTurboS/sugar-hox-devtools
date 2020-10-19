@@ -5,3 +5,5 @@ template
 # mac自动生成的文件
 .DS_Store
 dist.tgz
+dist
+example
