@@ -1,8 +1,8 @@
 {
   "name": "sugar-hox-devtools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "展示型组件，用于展示被 hox `createModel` 包裹的数据，每个 model 带有命名空间，主动挂载到 window.sugarHox 下",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prod.config.js",

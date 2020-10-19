@@ -67,5 +67,5 @@
       "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
     },
     "exclude": ["dist", "node_modules"],
-    "include": ["hox/**/*.ts", "hox/**/*.tsx"]
+    "include": ["src/hox/**/*.ts", "src/hox/**/*.tsx"]
   }
