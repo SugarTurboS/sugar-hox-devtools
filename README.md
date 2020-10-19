@@ -90,6 +90,18 @@ function App() {
 }
 ```
 
+## 组件参数
+
+| 参数      | 说明                | 类型       | 默认值             |
+| --------- | ------------------- | ---------- | ------------------ |
+| title     | 自定义              | string     | sugar-hox-devtools |
+| closeIcon | 关闭 icon           | ReactNode  | X                  |
+| onClose   | 点击 closeIcon 方法 | () => void | -                  |
+
+## 部分截图
+
+<img src="./assets/pic.png" width=800>
+
 ## Maintainers
 
 [@PDKSophia](https://github.com/PDKSophia)
