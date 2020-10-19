@@ -14,6 +14,10 @@
 
 - 之所以做这个 devTools，原因在于我们使用了 createModel 包裹之后，不知道这个数据是否真的被持久化、全局共享，只能通过在组件中 import 这个数据源，然后 console.log 打印，然后看是否真的被修改，因为太麻烦，所以 `SugarHoxDevTools` 出生了。
 
+## 注意提示
+
+**与你正常写 hooks，使用 hox 一样，只要经过 createModel 包裹后的 hooks，修改数据源之后，可以在 devtools 组件中，实时看到对应 model 的变化哦～**
+
 ## 快速开始
 
 ### 安装
