@@ -1,6 +1,6 @@
 {
   "name": "sugar-hox-devtools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "展示型组件，用于展示被 hox `createModel` 包裹的数据，每个 model 带有命名空间，主动挂载到 window.sugarHox 下",
   "main": "index.js",
   "scripts": {
