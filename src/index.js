@@ -1,21 +1,5 @@
-import React from 'react'
-import HoxTool from './HoxTool'
+import SugarHoxDevTools from './Main'
+export { createModel } from '../hox/create-model'
+export { withModel } from '../hox/with-model'
 
-class Index extends React.Component {
-  componentDidMount() {
-    new Proxy(window, {
-      get(target, propKey, receiver) {
-        return Reflect.get(target, propKey, receiver)
-      },
-      set(target, propKey, value, receiver) {
-        Reflect.set(target, propKey, value, receiver)
-      },
-    })
-  }
-
-  render() {
-    return <HoxTool />
-  }
-}
-
-export default Index
+export default SugarHoxDevTools
