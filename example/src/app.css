@@ -1,0 +1,36 @@
+.box {
+  padding: 24px;
+}
+.box > .tips {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.box > .count {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.box > .btn {
+  display: inline-flex;
+}
+
+.box > .btn > .decrement,
+.increment {
+  height: 32px;
+  cursor: pointer;
+  width: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  text-align: center;
+}
+
+.dev-tools {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  height: 800px;
+  width: 520px;
+}

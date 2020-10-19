@@ -14,7 +14,7 @@ class Main extends React.Component {
   }
 
   render() {
-    return <DevTools />
+    return <DevTools {...this.props} />
   }
 }
 

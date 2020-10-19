@@ -18,7 +18,7 @@ import {
   isObject,
 } from './utils'
 
-function DevTools({ onClose = () => {} }) {
+function DevTools({ title, closeIcon, onClose = () => {} }) {
   const currentTheme = THEME.DEFAULT
 
   function renderTitle(value, key) {
@@ -124,9 +124,9 @@ function DevTools({ onClose = () => {} }) {
       style={{ backgroundColor: currentTheme.background || '' }}
     >
       <div className={styles.header}>
-        <div className={styles.title}>Sugar Hox DevTools</div>
+        <div className={styles.title}>{title || 'sugar-hox-devtools'}</div>
         <div className={styles.close} onClick={onClose}>
-          X
+          {closeIcon || 'X'}
         </div>
       </div>
       <Tree treeData={format(window.sugarHox)} blockNode={true} />
