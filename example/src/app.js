@@ -29,8 +29,9 @@ const App = () => {
       </div>
       <div className={styles['dev-tools']}>
         <SugarHoxDevTools
+          maxScrollHeight={800}
           onClose={() => {
-            console.log(123)
+            alert('close devtools ~')
           }}
         />
       </div>

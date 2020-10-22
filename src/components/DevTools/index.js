@@ -17,8 +17,9 @@ import {
   isArray,
   isObject,
 } from './utils'
+import MyScrollBox from '../MyScrollBox'
 
-function DevTools({ title, closeIcon, onClose = () => {} }) {
+function DevTools({ title, closeIcon, onClose = () => {}, maxScrollHeight }) {
   const currentTheme = THEME.DEFAULT
 
   function renderTitle(value, key) {
@@ -129,7 +130,9 @@ function DevTools({ title, closeIcon, onClose = () => {} }) {
           {closeIcon || 'X'}
         </div>
       </div>
-      <Tree treeData={format(window.sugarHox)} blockNode={true} />
+      <MyScrollBox maxHeight={maxScrollHeight}>
+        <Tree treeData={format(window.sugarHox)} blockNode={true} />
+      </MyScrollBox>
     </div>
   )
 }
