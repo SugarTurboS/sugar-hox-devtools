@@ -1,4 +1,4 @@
-# SugarHoxDevTools 👋
+# sugar-hox-devtools 👋
 
 ![](https://img.shields.io/npm/dependency-version/hox/peer/react?logo=react)
 ![](https://img.shields.io/npm/v/sugar-hox-devtools?logo=npm)
@@ -8,13 +8,13 @@
 
 ## 相关说明
 
-- `SugarHoxDevTools`是一个组件，用于展示被 `createModel` 包裹的数据。[更多功能计划中]
+- `sugar-hox-dev-tools` 是一个带有 hox 原 API 及导出一个展示组件，用于展示被 `createModel` 包裹的数据。[更多功能计划中]
 
-- 修改了 hox 一小部分源码，如果依赖 hox 包，那么得在打包的时候，webpack 注入我自己修改的部分代码，相对麻烦，成本也高。于是邮箱问过 [umi/hox](https://github.com/umijs/hox)的开发者之一[brickspert](https://github.com/brickspert)，经过同意且此仓库为 MIT 协议，所以 fork 了此仓库并拉取源码进行修改，相关 API 仍保持与 hox 一致
+- 修改了 hox 一小部分源码，如果依赖 hox 包，那么得在打包的时候，webpack 注入我自己修改的部分代码，相对麻烦，成本也高。于是邮箱问过 [umi/hox](https://github.com/umijs/hox) 的开发者之一 [brickspert](https://github.com/brickspert)，经过同意且此仓库为 MIT 协议，所以 fork 了此仓库并拉取源码进行修改，相关 API 仍保持与 hox 一致
 
-- 之所以做这个 devTools，原因在于我们使用了 createModel 包裹之后，不知道这个数据是否真的被持久化、全局共享，只能通过在组件中 import 这个数据源，然后 console.log 打印，然后看是否真的被修改。
+- 之所以做这个 devtools，原因在于我们使用了 createModel 包裹之后，不知道这个数据是否真的被持久化、全局共享，只能通过在组件中 import 这个数据源，然后 console.log 打印，然后看是否真的被修改。
 
-- 还有就是当其他人接收之后，他想获取一些已经存在于全局共享的 Model，并没有一个展示全局共享数据的 Model，所以 `SugarHoxDevTools` 出生了。
+- 还有就是当其他人接手项目之后，他想查看一些已经存在于全局共享的 Model，并没有一个展示全局共享数据的 看板，所以 `sugar-hox-dev-tools` 出生了。
 
 ## 如何使用
 
@@ -110,6 +110,10 @@ function App() {
 <img src="./assets/dev.png" width=500>
 
 <img src="./assets/pic.png" width=600>
+
+## hox 版本跟进
+
+hox 本身比较简单，可以说是短小精干，问题出现也相对较少，当然，`sugar-hox-devtools` 开发者也会随时跟进 hox 的版本，进行更新～
 
 ## Maintainers
 
